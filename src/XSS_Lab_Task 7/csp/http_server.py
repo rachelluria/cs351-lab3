@@ -9,8 +9,8 @@ class MyHTTPRequestHandler(BaseHTTPRequestHandler):
     f = open("." + o.path, 'rb') 
     self.send_response(200)
     self.send_header('Content-Security-Policy', 
-          "default-src 'self';"
-          "script-src 'self' *.example68.com:8000 'nonce-1rA2345' ")     
+         "default-src 'self';"
+         "script-src 'self' *.example68.com:8000 'nonce-1rA2345' *.example79.com:8000 'nonce-2rB3333';")    
     self.send_header('Content-type', 'text/html')
     self.end_headers()
     self.wfile.write(f.read())
